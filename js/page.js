@@ -12,32 +12,72 @@
   });
 
   //フィルター機能
+  // const categories = document.querySelectorAll('.page-recommend-category-name');
+  // const listItems = document.querySelectorAll('.page-recommend-list-item');
+  // const className = ['show', 'hide'];
+  // const toggleClass = (el, indexA, indexB) => {
+  //   el.classList.remove(className[indexA]);
+  //   el.classList.add(className[indexB]);
+  // };
+
+  // categories.forEach(el => {
+  //   el.addEventListener('click', () => {
+  //     const categoryName = el.getAttribute('category');
+  //     listItems.forEach(item => {
+  //       const key = item.getAttribute('filter-key'); 
+  //       if(key !== categoryName) {
+  //         toggleClass(item, 0, 1);
+  //       } else {
+  //         toggleClass(item, 1, 0);
+  //       }
+  //     });
+  //   });
+  // });
+
+  // const allCategories = document.querySelector('.page-recommend-all');
+  // allCategories.addEventListener('click', () => {
+  //   listItems.forEach(item => {
+  //     toggleClass(item, 1, 0);
+  //   });
+  // });
+
+  //フィルター機能
+  // const categories = document.querySelectorAll('.page-recommend-category-name');
+  // const listItems = Array.from(document.querySelectorAll('.page-recommend-list-item'));
+
+  // categories.forEach(el => {
+  //   el.addEventListener('click', () => {
+  //     const categoryName = el.getAttribute('category');
+  //     const newListItems = listItems.filter((item) => {
+  //       categoryName === item.getAttribute('filter-key');
+  //     });
+  //     listItems.forEach(listItem => {
+  //       listItem.classList.add('hide');
+  //       newListItems.classList.add('show');
+  //     })
+  //   });
+  // });
+
   const categories = document.querySelectorAll('.page-recommend-category-name');
   const listItems = document.querySelectorAll('.page-recommend-list-item');
-  const className = ['show', 'hide'];
-  const toggleClass = (el, indexA, indexB) => {
-    el.classList.remove(className[indexA]);
-    el.classList.add(className[indexB]);
-  };
 
   categories.forEach(el => {
     el.addEventListener('click', () => {
       const categoryName = el.getAttribute('category');
-      listItems.forEach(item => {
-        const key = item.getAttribute('filter-key'); 
-        if(key !== categoryName) {
-          toggleClass(item, 0, 1);
-        } else {
-          toggleClass(item, 1, 0);
-        }
+      const newListItems = document.querySelectorAll('[data-key="'+categoryName+'"]');
+      listItems.forEach(listItem => {
+        listItem.classList.add('hide');
+      });
+      newListItems.forEach(newListItem => {
+        newListItem.classList.remove('hide');
       });
     });
   });
 
   const allCategories = document.querySelector('.page-recommend-all');
   allCategories.addEventListener('click', () => {
-    listItems.forEach(item => {
-      toggleClass(item, 1, 0);
+    listItems.forEach(listItem => {
+      listItem.classList.remove('hide');
     });
-  });
+  }); 
 }
