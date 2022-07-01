@@ -32,157 +32,119 @@
     <script src="https://kit.fontawesome.com/f1693f3bfe.js" crossorigin="anonymous"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <!-- ローディング -->
-    <div class="loading">
-      <p class="c-text-en">
-        Attractif
-      </p>
+    <div id="intro">
+      <loading></loading>
+      <modal></modal>
     </div>
 
-    <!-- モーダルウィンドウ -->
-    <div class="mask"></div>
-    <section class="modal-info">
-      <div class="modal-close">
-        <span></span>
-        <span></span>
-      </div>
-      <h3>ニュースレター登録</h3>
-      <p>最新情報やお得なご案内をいち早くお届けいたします。</p>
-      <a href="" class="modal-btn">登録</a>
-    </section>    
-
     <header>
-      <div class="top-header-slider">
-        <img src="img/bg-top-kv01@2x.jpg" srcset="img/bg-top-kv01.jpg 1x, img/bg-top-kv01@2x.jpg 2x" class="top-header-img" />
-        <img src="img/bg-top-kv02@2x.jpg" srcset="img/bg-top-kv02@2x.jpg 1x, img/bg-top-kv02@2x.jpg 2x" class="top-header-img" />
-        <img src="img/bg-top-kv03@2x.jpg" srcset="img/bg-top-kv03@2x.jpg 1x, img/bg-top-kv03@2x.jpg 2x" class="top-header-img" />
-      </div>
-      <div class="header-inner top-header-inner">
-        <h1 class="c-text-en"><a href="index.html">Attractif</a></h1>
-        <div class="hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <!-- オーバーレイ -->
-        <div class="overlay">
-          <nav>
-            <ul>
-              <li class="g-nav-item c-text-en"><a href="#">Top</a></li>
-              <li class="g-nav-item c-text-en"><a href="#">Online Shop</a></li>
-              <li class="g-nav-item c-text-en"><a href="#">Collection</a></li>
-              <li class="g-nav-item c-text-en"><a href="#">Bridal</a></li>
-              <li class="g-nav-item c-text-en"><a href="#">Concept</a></li>
-              <li class="g-nav-item c-text-en"><a href="#">News</a></li>
-              <li class="g-nav-item c-text-en"><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <ul class="overlay-sns-links sns-links">
-            <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-          </ul>
-        </div>
-
-        <div class="top-scrolldown"><span></span></div>
+      <div id="header" class="header top__header">
+        <h1 class="header__logo"><a href="index.html">Attractif</a></h1>
+        <gnav></gnav>
+        <div class="scrolldown"><span></span></div>
       </div>
     </header>
 
-    <main>
-      <section class="top-pickup c-fade-in">
-        <h2 class="top-title-cursive c-text-en-c">Pick Up</h2>
+    <main id="scrollTop">
+      <!-- キービジュアル -->
+      <div id="slider__apps">
+        <template></template>
+      </div>
+
+      <section class="pickup fadeIn">
+        <h2 class="pickup__title">Pick Up</h2>
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide--01"><a href="" class="c-text-en-c"><span>Summer<br>Collection</span></a></div>
-            <div class="swiper-slide swiper-slide--02"><a href="" class="c-text-en-c"><span>Bridal</span></a></div>
-            <div class="swiper-slide swiper-slide--03"><a href="" class="c-text-en"><span>Ring Fair</span></a></div>
-            <div class="swiper-slide swiper-slide--04"><a href="" class="c-text-en"><span>Basic<br>Collection</span></a></div>
+            <div class="swiper-slide swiper-slide--01"><a href=""><span>Summer<br>Collection</span></a></div>
+            <div class="swiper-slide swiper-slide--02"><a href=""><span>Bridal</span></a></div>
+            <div class="swiper-slide swiper-slide--03"><a href=""><span>Ring Fair</span></a></div>
+            <div class="swiper-slide swiper-slide--04"><a href=""><span>Basic<br>Collection</span></a></div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </section>
 
-      <section class="top-recommend">
-        <div>
-          <h2 class="top-title-cursive c-text-en-c c-fade-in c-fade-in--up">Recommend</h2>
-          <ul class="top-recommend-list c-item-list l-container c-fade-in c-fade-in--order">
-            <li class="top-recommend-list-item c-item-list-item c-fade-in-order-item c-fade-in--up">
-              <a href="" class="c-item-thumbnail">
+      <section class="recommend">
+        <div class="recommend__inner">
+          <h2 class="recommend__title fadeIn fadeIn--up">Recommend</h2>
+          <ul class="recommend__list itemList fadeIn fadeIn--order">
+            <li class="recommend__item itemList__item fadeIn--order fadeIn--up">
+              <a href="item.html" class="itemList-thumbnail">
                 <img src="img/pic-list-recommend01@2x.jpg" srcset="img/pic-list-recommend01.jpg 360w, img/pic-list-recommend01@2x.jpg 720w" alt="リング01" decoding="async" loading="lazy" />
               </a>
-              <span class="c-item-price">¥32,800</span>
+              <span class="itemList__price">¥32,800</span>
             </li>
-            <li class="top-recommend-list-item c-item-list-item c-fade-in-order-item c-fade-in--up">
-              <a href="" class="c-item-thumbnail">
+            <li class="recommend__item itemList__item fadeIn--order fadeIn--up">
+              <a href="item.html" class="itemList-thumbnail">
                 <img src="img/pic-list-recommend02@2x.jpg" srcset="img/pic-list-recommend02.jpg 360w, img/pic-list-recommend02@2x.jpg 720w" alt="ピアス01" decoding="async" loading="lazy" />
               </a>
-              <span class="c-item-price">¥24,000</span>
+              <span class="itemList__price">¥24,000</span>
             </li>
-            <li class="top-recommend-list-item c-item-list-item c-fade-in-order-item c-fade-in--up">
-              <a href="" class="c-item-thumbnail">
+            <li class="recommend__item itemList__item fadeIn--order fadeIn--up">
+              <a href="item.html" class="itemList-thumbnail">
                 <img src="img/pic-list-recommend03@2x.jpg" srcset="img/pic-list-recommend03.jpg 360w, img/pic-list-recommend03@2x.jpg 720w" alt="ヘアクリップ01" decoding="async" loading="lazy" />
               </a>
-              <span class="c-item-price">¥14,500</span>
+              <span class="itemList__price">¥14,500</span>
             </li>
-            <li class="top-recommend-list-item c-item-list-item c-fade-in-order-item c-fade-in--up">
-              <a href="" class="c-item-thumbnail">
+            <li class="recommend__item itemList__item fadeIn--order fadeIn--up">
+              <a href="item.html" class="itemList-thumbnail">
                 <img src="img/pic-list-recommend04@2x.jpg" srcset="img/pic-list-recommend04.jpg 360w, img/pic-list-recommend04@2x.jpg 720w" alt="ピアス02" decoding="async" loading="lazy" />
               </a>
-              <span class="c-item-price">¥21,500</span>
+              <span class="itemList__price">¥21,500</span>
             </li>
-            <li class="top-recommend-list-item c-item-list-item c-fade-in-order-item c-fade-in--up">
-              <a href="" class="c-item-thumbnail">
+            <li class="recommend__item itemList__item fadeIn--order fadeIn--up">
+              <a href="item.html" class="itemList-thumbnail">
                 <img src="img/pic-list-recommend05@2x.jpg" srcset="img/pic-list-recommend05.jpg 360w, img/pic-list-recommend05@2x.jpg 720w" alt="リング02" decoding="async" loading="lazy" />
               </a>
-             <span class="c-item-price">¥38,400</span>
+             <span class="itemList__price">¥38,400</span>
             </li>
-            <li class="top-recommend-list-item c-item-list-item c-fade-in-order-item c-fade-in--up">
-              <a href="" class="c-item-thumbnail">
+            <li class="recommend__item itemList__item fadeIn--order fadeIn--up">
+              <a href="item.html" class="itemList-thumbnail">
                 <img src="img/pic-list-recommend06@2x.jpg" srcset="img/pic-list-recommend06.jpg 360w, img/pic-list-recommend06@2x.jpg 720w" alt="ピアス03" decoding="async" loading="lazy" />
               </a>
-              <span class="c-item-price">¥19,000</span>
+              <span class="itemList__price">¥19,000</span>
             </li>
           </ul>
-          <div class="c-btn-container c-fade-in c-fade-in--up">
-            <a href="recommend.html" class="c-btn c-btn--secondary c-text-en">MORE</a>
+          <div class="btn__container fadeIn fadeIn--up">
+            <a href="recommend.html" class="btn btn--secondary">MORE</a>
           </div>
         </div>
       </section>
 
-      <section class="top-concept">
-        <div class="top-concept-inner">
-          <div class="c-fade-in c-fade-in--up">
-            <h2 class="top-concept-title c-title-lv1 c-title-lv1--white c-text-en">CONCEPT</h2>
-            <p class="top-concept-description">
+      <section class="concept">
+        <div class="concept__inner">
+          <div class="fadeIn fadeIn--up">
+            <h2 class="concept__title">CONCEPT</h2>
+            <p class="concept__description">
               <span>Attractifが目指すのは、</span>
               <span>飾るのではなく本来の自分の魅力を</span>
               <span>引き出すためのアクセサリー。</span>
             </p>
-            <div class="c-btn-container">
-              <a href="" class="c-btn c-btn--white c-text-en">MORE</a>
+            <div class="btn__container">
+              <a href="" class="btn btn--white">MORE</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="top-shop c-fade-in c-fade-in--up">
-        <h2 class="c-title-lv1 c-title-lv1--primary c-text-en">SHOP</h2>
-        <ul class="top-shop-list">
-          <li class="top-shop-list-item">
-            <span class="top-shop-list-item-name">青山本店</span>
+      <section class="shop fadeIn fadeIn--up">
+        <h2 class="shop__title">SHOP</h2>
+        <ul class="shop__list">
+          <li class="shop__item">
+            <span class="shop__name">青山本店</span>
             <span>〒111-1111</span>
             <span>港区南青山1-1-111</span>
             <span>03-0000-0000</span>
             <span>11:00〜20:00 </span>
           </li>
-          <li class="top-shop-list-item">
-            <span class="top-shop-list-item-name">横浜店</span>
+          <li class="shop__item">
+            <span class="shop__name">横浜店</span>
             <span>〒222-2222</span>
             <span>港区南青山2-2-222</span>
             <span>045-000-0000</span>
@@ -191,52 +153,52 @@
         </ul>
       </section>
 
-      <section class="top-instagram">
-        <ul class="top-instagram-list c-fade-in c-fade-in--order">
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+      <section class="instagram">
+        <ul class="instagram__list fadeIn fadeIn--order">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram01@2x.jpg" srcset="img/pic-instagram01.jpg 675w, img/pic-instagram01@2x.jpg 1350w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram02@2x.jpg" srcset="img/pic-instagram02.jpg 337w, img/pic-instagram02@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram03@2x.jpg" srcset="img/pic-instagram03.jpg 337w, img/pic-instagram03@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram04-sp@2x.jpg" srcset="img/pic-instagram04.jpg 337w, img/pic-instagram04@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
-            <a href="" target="_blank" rel="noopener noreferrer" class="top-instagram-info-wrapper">
-              <p class="top-instagram-info">
+          <li class="instagram__item fadeIn--order fadeIn--up">
+            <a href="" target="_blank" rel="noopener noreferrer" class="instagramInfo__wrapper">
+              <p class="instagramInfo">
                 <i class="fa-brands fa-instagram"></i>
-                <span class="c-text-en">@Attractif_Official</span>
+                <span>@Attractif_Official</span>
               </p>
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram05-sp@2x.jpg" srcset="img/pic-instagram05.jpg 337w, img/pic-instagram05@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram06-sp@2x.jpg" srcset="img/pic-instagram06.jpg 337w, img/pic-instagram06@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram07-sp@2x.jpg" srcset="img/pic-instagram07.jpg 337w, img/pic-instagram07@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
           </li>
-          <li class="top-instagram-list-item c-fade-in-order-item c-fade-in--up">
+          <li class="instagram__item fadeIn--order fadeIn--up">
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="img/pic-instagram08-sp@2x.jpg" srcset="img/pic-instagram08.jpg 337w, img/pic-instagram08@2x.jpg 674w" alt="..." decoding="async" loading="lazy" />
             </a>
@@ -244,10 +206,10 @@
         </ul>
       </section>
 
-      <section class="top-news">
-        <div class="c-fade-in c-fade-in--up">
-          <h2 class="c-title-lv1 c-title-lv1--primary c-text-en">NEWS</h2>
-          <table class="top-news-contents l-container-s">
+      <section class="news">
+        <div class="fadeIn fadeIn--up">
+          <h2 class="news__title">NEWS</h2>
+          <table class="news__contents">
             <tr>
               <th><time datetime="2022-04-14">2022.04.14</time></th>
               <td><a href="">2022 Summer Collectionのご案内</a></td>
@@ -261,40 +223,43 @@
               <td><a href="">青山本店・横浜店の営業時間変更のお知らせ</a></td>
             </tr>
           </table>
-          <a href="recommend.html" class="c-btn c-btn--primary c-text-en">MORE</a>
+          <a href="" class="btn btn--primary">MORE</a>
         </div>
       </section>
-      <p class="page-top">
+      <transition name="fadeUpDown">
+      <p class="page-top" v-show="arrive" @click="scrollTop">
         <span></span>
         <span></span>
       </p>
+      </transition>
     </main>
 
     <footer>
-      <div class="l-container">
-        <a href="index.html" class="footer-logo c-text-en">Attractif</a>
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">Attractif</a>
         <nav>
-          <ul class="footer-nav">
-            <li class="footer-nav-item"><a href="" class="c-text-en">Online Shop</a></li>
-            <li class="footer-nav-item"><a href="" class="c-text-en">Collection</a></li>
-            <li class="footer-nav-item"><a href="" class="c-text-en">Bridal</a></li>
-            <li class="footer-nav-item"><a href="" class="c-text-en">Concept</a></li>
-            <li class="footer-nav-item"><a href="" class="c-text-en">News</a></li>
-            <li class="footer-nav-item"><a href="" class="c-text-en">Contact</a></li>
+          <ul class="footerNav">
+            <li class="footerNav__item"><a href="" class="c-text-en">Online Shop</a></li>
+            <li class="footerNav__item"><a href="" class="c-text-en">Collection</a></li>
+            <li class="footerNav__item"><a href="" class="c-text-en">Bridal</a></li>
+            <li class="footerNav__item"><a href="" class="c-text-en">Concept</a></li>
+            <li class="footerNav__item"><a href="" class="c-text-en">News</a></li>
+            <li class="footerNav__item"><a href="" class="c-text-en">Contact</a></li>
           </ul>
         </nav>
-        <ul class="sns-links">
+        <ul class="snsLinks">
           <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a></li>
           <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
           <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
-        <p class="footer-copyright"><small class="c-text-en">© Attractif CO.,LTD.</small></p>
+        <p class="footer__copyright"><small>© Attractif CO.,LTD.</small></p>
       </div>
     </footer>
 
     <!-- js -->
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/top.js" defer></script>
     <script src="js/common.js" defer></script>
+    <script src="js/top.js" defer></script>
   </body>
 </html>

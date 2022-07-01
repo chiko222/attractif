@@ -1,0 +1,43 @@
+@use 'variable' as v;
+
+@mixin mq-pc {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-pc-l {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mq-pc-ll {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin container($size:1080px) {
+  width: min(90%, $size);
+  margin-inline: auto;
+}
+
+@mixin font($size, $weight:bold) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+
+@mixin cursive {
+  font-family: v.$font-family-en-c;
+  font-size: 4.8rem;
+  line-height: 1;
+  color: v.$color-secondary;
+
+  @include mq-pc {
+    font-size: 5.8rem;
+    padding-left: 5%;
+  };
+}
